@@ -1,0 +1,35 @@
+<!--mine.wxml-->
+
+<view class="login-container">
+
+  <view  wx:if="{{!hasUserInfo && canIUse}}">
+    <button class="weui-btn"  type="primary" open-type="getUserInfo" bindgetuserinfo="authorization"> 微信授权登录 </button>
+  </view>
+
+  <view class="userinfo" wx:else>
+    <block >
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  
+
+    <view class="usermotto">
+
+      <view class='listmine' bindtap="tolikes">
+       <image class='icon_mine' src='../../images/icons/likeHL.png'></image>
+       <text class='text_like'>{{like}}</text>
+       <image class='icon_point' src='../../images/icons/pointblue.png'></image>
+      </view>
+
+      <view class='listmine' bindtap="toaddcontent">
+       <image class='icon_mine' src='../../images/icons/addblue.png'></image>
+       <text class='text_like'>{{add}}</text>
+       <image class='icon_point' src='../../images/icons/pointblue.png'></image>
+      </view>
+    </view>
+  </view>
+
+  
+</view>
+
+

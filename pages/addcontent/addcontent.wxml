@@ -1,0 +1,12 @@
+<!--pages/addcontent/addcontent.wxml-->
+<text>pages/addcontent/addcontent.wxml</text>
+
+
+<view class="big-logos">  
+        <image class="addcontents" bindtap="upimg" src='../../images/icons/add.png'></image>  
+        <block wx:for="{{img_arr}}">  
+          <view class='logoinfo'>  
+            <image src='{{item}}'></image>  
+          </view>  
+        </block>  
+</view>  
