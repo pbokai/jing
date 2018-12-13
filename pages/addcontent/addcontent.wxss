@@ -2,9 +2,19 @@
 .big-logos{
   height: 180px;
   width: 90%;
-  border: 0.08rpx solid rgb(43, 43, 25);
+  /* border: 0.08rpx solid rgb(43, 43, 25); */
 }
 .addcontents{
   width: 40px;
   height: 40px
+}
+.logoinfo{
+  width: 60px;
+  height: 60px
+}
+
+.add_form_style{
+  width: 80%;
+  height: 80%;
+  border: 1rpx solid rgb(43, 43, 25);
 }

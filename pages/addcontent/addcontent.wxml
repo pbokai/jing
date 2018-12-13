@@ -1,12 +1,16 @@
 <!--pages/addcontent/addcontent.wxml-->
-<text>pages/addcontent/addcontent.wxml</text>
-
-
+<form >
+<view class='add_form_style'>
+<view >
+<input placeholder='标题'></input>
+</view>
 <view class="big-logos">  
         <image class="addcontents" bindtap="upimg" src='../../images/icons/add.png'></image>  
         <block wx:for="{{img_arr}}">  
-          <view class='logoinfo'>  
-            <image src='{{item}}'></image>  
-          </view>  
+          <view class='logoinfo'>
+            <image class='logoinfo' src='{{item}}'></image>
+          </view>
         </block>  
 </view>  
+</view>
+</form>

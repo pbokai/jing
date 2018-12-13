@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/list/list",
     "pages/test/test",
-    "pages/addcontent/addcontent"
+    "pages/addcontent/addcontent",
+    "pages/question-ask/question-ask"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

@@ -83,11 +83,18 @@ Page({
                     })
                   } else {
                     console.log('解密失败')
+                    that.setData({
+                      userInfo: res.userInfo,
+                      hasUserInfo: true
+                    })
                   }
                 },
                 fail: function () {
                   console.log('系统错误')
-                  
+                  that.setData({
+                    userInfo: res.userInfo,
+                    hasUserInfo: true
+                  })
                 }
               })
             },
@@ -113,9 +120,19 @@ Page({
     })
   },
   toaddcontent: function(){
-    wx.navigateTo({
-      url: '../../pages/addcontent/addcontent'
-    })
+    console.log('toadd')
+    console.log(wx.getStorageSync('sessionid'))
+    if(wx.getStorageSync('sessionid')){
+      wx.navigateTo({
+        url: '../../pages/question-ask/question-ask'
+      })
+    }else{
+      this.setData({
+        userInfo: {},
+        hasUserInfo: false
+      })
+    }
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
