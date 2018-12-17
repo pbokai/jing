@@ -45,6 +45,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    host:'https://guolisha.top:8060'
+
   }
 })

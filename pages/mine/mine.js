@@ -1,5 +1,6 @@
 //mainjs
-const app = getApp();
+var app = getApp();
+var baseUrl = app.globalData.host;
 Page({
   /**
    * 页面的初始数据
@@ -59,7 +60,7 @@ Page({
               console.log(res)
               //3.请求自己的服务器，解密用户信息 获取unionId等加密信息  
               wx.request({
-                url: 'https://127.0.0.1:8060/authorization',//自己的服务接口地址  
+                url: baseUrl+'/authorization',//自己的服务接口地址  
                 method: 'POST',
                 header: {
                   'content-type': 'application/x-www-form-urlencoded'
